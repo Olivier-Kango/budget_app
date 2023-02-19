@@ -57,6 +57,9 @@ Please click on the video below to more explanation
   <summary>Server</summary>
     <ul>
       <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    </ul>
+  <summary>Database</summary>
+    <ul>
       <li><a href="https://www.postgresql.org/">Postgres</a></li>
     </ul>
   </details>
