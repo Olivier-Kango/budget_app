@@ -170,7 +170,6 @@ You can deploy this project using:
 ## 🔭 Future Features <a id="future-features"></a>
 
 > Features to add to the project.
-- **Deploy the projet**
 - **Implement some UX improvements: include transitions and/or animations, etc.**
 - **Make a Desktop design for the webapp**
 - **Implement the left side menu to improve the navigability of the app**
