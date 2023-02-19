@@ -54,15 +54,17 @@ Please click on the video below to more explanation
 
 ### Tech Stack <a id="tech-stack"></a>
   <details>
-  <summary>Server</summary>
+    <summary>Server</summary>
     <ul>
       <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
     </ul>
-  <summary>Database</summary>
+  </details>
+  <details>
+    <summary>Database</summary>
     <ul>
       <li><a href="https://www.postgresql.org/">Postgres</a></li>
     </ul>
-  </details>
+   </details>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
