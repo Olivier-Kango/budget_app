@@ -1,14 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New category", new_category_path %>
+<h4 class="bg-success text-center text-white pb-2">Categories</h4>
+<section>
+  <div class="container mb-5">
+    <%= render partial: "category", collection: @categories %>
+  </div>
+  <%= link_to "Add New Category", new_category_path, class:"btn btn-success rounded-0 w-100 position-fixed bottom-0" %>
+</section>
