@@ -1,5 +1,5 @@
 <section>
-  <h4 class="bg-success text-center text-white pb-2">Add new category</h4>
+  <h4 class="bg-primary text-center text-white pb-2">Add new category</h4>
   <div class="container-fluid mt-3">
     <%= bootstrap_form_with model: category, url: categories_path(@category) do |f| %>
       <div class="field">
@@ -11,7 +11,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Save", class:"btn btn-success rounded-0 w-100 position-fixed bottom-0 start-0" %>
+        <%= f.submit "Save", class:"btn btn-primary rounded-0 w-100 position-fixed bottom-0 start-0" %>
       </div>
     <%end%>
   </div>
