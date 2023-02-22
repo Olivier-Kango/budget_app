@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class ExpensesController < ApplicationController
   def index
     @category = Category.includes(:expenses).find(params[:category_id])
-    @Expenses = @category.category_recent_Expenses
+    @expenses = @category.category_recent_Expenses
   end
 
   def new
     @categories = Category.where(author: current_user)
-    @Expense = Expense.new
+    @expense = Expense.new
     respond_to do |format|
       format.html { render :new, locals: { expense: @expense } }
     end
