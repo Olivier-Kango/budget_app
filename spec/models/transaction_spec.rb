@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Transaction, type: :model do
+RSpec.describe Expense, type: :model do
   # Test validation
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:amount) }

@@ -11,7 +11,7 @@ RSpec.describe Category, type: :model do
 
   # Test associations
   it { should belong_to(:author) }
-  it { should have_many(:transactions) }
+  it { should have_many(:expenses) }
 
   # Test instance methods
   context 'check validation' do

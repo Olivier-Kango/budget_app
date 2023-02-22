@@ -7,7 +7,7 @@ class Category < ApplicationRecord
   validates :name, :icon, presence: true
 
   def category_total_amount
-    transactions.sum(:amount)
+    expenses.sum(:amount)
   end
 
   def category_recent_expenses

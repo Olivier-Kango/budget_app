@@ -3,7 +3,7 @@
 class ExpensesController < ApplicationController
   def index
     @category = Category.includes(:expenses).find(params[:category_id])
-    @expenses = @category.category_recent_Expenses
+    @expenses = @category.category_recent_expenses
   end
 
   def new
