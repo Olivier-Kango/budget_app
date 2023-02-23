@@ -1,0 +1,19 @@
+name: Update Permissions
+
+on: push
+
+jobs:
+  update_permissions:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Grant execute permissions to files
+        run: |
+          icacls bin\rails /grant:r "%USERNAME%":(RX)
+          icacls bin\rake /grant:r "%USERNAME%":(RX)
+          icacls bin\setup /grant:r "%USERNAME%":(RX)
+          git add bin/rails bin/rake bin/setup
+          git commit -m "Grant execute permission to Rails scripts" || true
+          git push
