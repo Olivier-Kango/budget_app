@@ -45,7 +45,7 @@
 }
 
 .welcome {
-  font-family: cursive, sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
