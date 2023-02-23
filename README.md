@@ -219,7 +219,6 @@ I would like to thank:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- LICENSE -->
 ## 📝 License <a id="license"></a>
 
