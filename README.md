@@ -38,7 +38,7 @@ Please click on the video below to more explanation
 </div>
 
 <div align="center">
-  <a href="https://www.loom.com/share/9b46f373ab0b4253808dcba82accb7a3">
+  <a href="https://www.loom.com/share/dbdff12cc31548deaf512e2f43b0de7b">
     <img width="600" alt="expenses_list" src="https://user-images.githubusercontent.com/108806646/219854544-36a9104f-5329-4c0f-969d-e51bd8fa5808.png">
   </a>
 </div>
@@ -84,7 +84,7 @@ Please click on the video below to more explanation
 
 > Please click the link below to open our webpage in your browser
 
-- [Live Demo Link](https://)
+- [Live Demo Link](https://kango-budget-app.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
