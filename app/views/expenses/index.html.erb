@@ -4,5 +4,7 @@
   <div class="container mb-5">
     <%= render partial: "expense", collection: @expenses %>
   </div>
-  <%= link_to "Add New expense", new_expense_path, class:"btn btn-primary rounded-0 w-100 position-fixed bottom-0" %>
+  <div class="scan rounded-0 w-100 position-fixed bottom-0">
+    <%= link_to "Add New expense", new_expense_path, class:"rounded-0 btn text-white scan-button" %>
+  </div>
 <section>
