@@ -12,4 +12,43 @@
  *
  *= require_tree .
  *= require_self
+ *= require rails_bootstrap_forms
+ *= require font-awesome
  */
+
+.bg-primary,
+.btn-primary {
+  background-color: #3778c2 !important;
+}
+
+.card-title,
+.position-relative {
+  color: gray;
+}
+
+.scan {
+  background: #5fb523 !important;
+  border: 2px solid white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-button {
+  border: 1px solid white;
+  width: 94%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}

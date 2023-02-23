@@ -1,0 +1,9 @@
+<h4 class="bg-primary text-center text-white pb-2">Categories</h4>
+<section>
+  <div class="container mb-5 pb-4">
+    <%= render partial: "category", collection: @categories %>
+  </div>
+  <div class="scan rounded-0 w-100 position-fixed bottom-0">
+  <%= link_to "ADD NEW CATEGORY", new_category_path, class:"rounded-0 btn text-white scan-button" %>
+  </div>
+</section>

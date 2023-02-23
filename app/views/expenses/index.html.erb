@@ -1,0 +1,10 @@
+<h4 class="bg-primary text-center text-white pb-2"><%= @category.name %>: $<%= @category.category_total_amount %></h4>
+</div>
+<section>
+  <div class="container mb-5">
+    <%= render partial: "expense", collection: @expenses %>
+  </div>
+  <div class="scan rounded-0 w-100 position-fixed bottom-0">
+    <%= link_to "Add New expense", new_expense_path, class:"rounded-0 btn text-white scan-button" %>
+  </div>
+<section>

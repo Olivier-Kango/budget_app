@@ -29,7 +29,7 @@
 
 # 📖 Budget app <a id="about-project"></a>
 
-> The Budget app is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> The Budget app is about building a mobile web application where you can manage your budget: you have a list of expenses associated with a category, so that you can see how much money you spent and on what.
 
 <div align="center">
 Please click on the video below to more explanation
@@ -38,8 +38,8 @@ Please click on the video below to more explanation
 </div>
 
 <div align="center">
-  <a href="https://www.loom.com/share/9b46f373ab0b4253808dcba82accb7a3">
-    <img width="600" alt="transactions_list" src="https://user-images.githubusercontent.com/108806646/219854544-36a9104f-5329-4c0f-969d-e51bd8fa5808.png">
+  <a href="https://www.loom.com/share/dbdff12cc31548deaf512e2f43b0de7b">
+    <img width="600" alt="expenses_list" src="https://user-images.githubusercontent.com/108806646/219854544-36a9104f-5329-4c0f-969d-e51bd8fa5808.png">
   </a>
 </div>
 
@@ -84,7 +84,7 @@ Please click on the video below to more explanation
 
 > Please click the link below to open our webpage in your browser
 
-- [Live Demo Link](https://)
+- [Live Demo Link](https://kango-budget-app.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -218,7 +218,6 @@ I would like to thank:
   - check the [Getting Started](#getting-started) section to have a complete guid on how to setup and run teh project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## 📝 License <a id="license"></a>
