@@ -16,7 +16,7 @@
  *= require font-awesome
  */
 
- .bg-primary,
- .btn-primary {
-  background-color: #3778C2;
- }
+.bg-primary,
+.btn-primary {
+  background-color: #3778C2 !important;
+}
