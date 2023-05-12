@@ -289,6 +289,7 @@ DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2)
   bootstrap_form (~> 5.1)
+  bundler (= 2.4.10)
   cancancan
   capybara
   debug
@@ -316,4 +317,4 @@ RUBY VERSION
    ruby 3.1.3p185
 
 BUNDLED WITH
-   2.4.5
+   2.4.10
