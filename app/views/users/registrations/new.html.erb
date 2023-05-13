@@ -25,8 +25,8 @@
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"rounded-0",hide_label: true, placeholder: "Confirmation Password (#{@minimum_password_length} characters minimum)", required: true %>
       </div>
 
-      <div class="actions" style="margin-top: 5em">
-        <%= f.submit "Sign up", class:"btn btn-primary rounded-0 w-100" %>
+      <div class="actions w-100 d-flex flex-column align-items-center" style="margin-top: 5em">
+        <%= f.submit "Sign up", class:"btn btn-primary rounded-0 w-100", style:"max-width: 450px" %>
       </div>
     <% end %>
   </div>

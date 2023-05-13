@@ -1,0 +1,14 @@
+<%= link_to product_expenses_path(product), class:"text-dark", style:"text-decoration: none;" do %>
+  <div class="card flex-row align-items-center p-3 my-3 rounded-0">
+    <div style="width: 5rem; height: 5rem; object-fit: cover; overflow: hidden;">
+      <img src=<%= product.icon %> class="card-img-top" alt=<%= product.name %>>
+    </div>
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title"><%= product.name %></h5>
+        <p class="card-text"><strong>$<%= product.product_total_amount %></strong></p>
+      </div>
+      <p class="position-relative" style="top: 1em"><%= product.updated_at.strftime('%A-%b-%Y | %H:%M:%S') %></p>
+    </div>
+  </div>
+<% end %>
