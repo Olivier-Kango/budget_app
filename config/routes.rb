@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   }
 
   authenticated do
-    root to: 'categories#index', as: :authenticated_user
+    root to: 'products#index', as: :authenticated_user
   end
 
   root to: 'splash#index', as: :unauthenticated_user
 
-  resources :categories, only: %i[index show new create] do
+  resources :products, only: %i[index show new create] do
     resources :expenses, only: [:index]
   end
   resources :expenses, only: %i[new create]

@@ -12,7 +12,7 @@ RSpec.describe 'Category Index Page', type: :feature do
 
   describe 'GET /index' do
     before :each do
-      visit categories_path
+      visit products_path
     end
 
     it 'returns the correct category on the page' do

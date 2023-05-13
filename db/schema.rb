@@ -18,11 +18,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_13_122850) do
     t.string "name"
     t.decimal "amount"
     t.bigint "author_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_expenses_on_author_id"
-    t.index ["category_id"], name: "index_expenses_on_category_id"
+    t.index ["product_id"], name: "index_expenses_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|

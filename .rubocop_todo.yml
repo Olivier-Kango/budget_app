@@ -33,12 +33,12 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-    - 'app/controllers/categories_controller.rb'
+    - 'app/controllers/products_controller.rb'
     - 'app/controllers/expenses_controller.rb'
     - 'app/controllers/splash_controller.rb'
     - 'app/controllers/users/registrations_controller.rb'
     - 'db/migrate/20230221040742_devise_create_users.rb'
-    - 'db/migrate/20230221164333_create_categories.rb'
+    - 'db/migrate/20230221164333_create_products.rb'
     - 'db/migrate/20230221165818_create_expenses.rb'
 
 # Offense count: 2

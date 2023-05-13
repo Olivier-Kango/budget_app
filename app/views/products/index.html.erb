@@ -1,0 +1,9 @@
+<h4 class="bg-primary text-center text-white pb-2">Products</h4>
+<section>
+  <div class="container mb-5 pb-4">
+    <%= render partial: "product", collection: @products %>
+  </div>
+  <div class="scan rounded-0 w-100 position-fixed bottom-0">
+  <%= link_to "ADD NEW PRODUCT", new_product_path, class:"rounded-0 btn text-white scan-button" %>
+  </div>
+</section>

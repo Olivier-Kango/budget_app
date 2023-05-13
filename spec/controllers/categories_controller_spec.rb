@@ -13,7 +13,7 @@ RSpec.describe Category, type: :request do
   describe 'GET /index' do
     before :each do
       sign_in @user
-      get categories_path
+      get products_path
     end
 
     it 'returns a successful status' do
