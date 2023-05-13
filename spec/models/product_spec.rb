@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
+RSpec.describe Product, type: :model do
   let(:user) { create(:user) }
 
   # Test validation
@@ -15,20 +15,20 @@ RSpec.describe Category, type: :model do
 
   # Test instance methods
   context 'check validation' do
-    subject { Category.new(name: 'Games', icon: 'games.jpg', author: user) }
+    subject { Product.new(name: 'Games', icon: 'games.jpg', author: user) }
 
     before { subject.save }
 
-    it 'when name and icon are presence category should be valid' do
+    it 'when name and icon are presence product should be valid' do
       expect(subject).to be_valid
     end
 
-    it 'when name not presence category should be not valid' do
+    it 'when name not presence product should be not valid' do
       subject.name = nil
       expect(subject).to_not be_valid
     end
 
-    it 'when icon not presence category should be not valid' do
+    it 'when icon not presence product should be not valid' do
       subject.icon = nil
       expect(subject).to_not be_valid
     end
