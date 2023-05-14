@@ -4,7 +4,7 @@ require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @product = categories(:one)
+    @category = categories(:one)
   end
 
   test 'should get index' do
@@ -13,36 +13,36 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get new' do
-    get new_product_url
+    get new_category_url
     assert_response :success
   end
 
-  test 'should create product' do
-    assert_difference('Product.count') do
-      post categories_url, params: { product: { icon: @product.icon, name: @product.name } }
+  test 'should create category' do
+    assert_difference('Category.count') do
+      post categories_url, params: { category: { icon: @category.icon, name: @category.name } }
     end
 
-    assert_redirected_to product_url(Product.last)
+    assert_redirected_to category_url(Category.last)
   end
 
-  test 'should show product' do
-    get product_url(@product)
+  test 'should show category' do
+    get category_url(@category)
     assert_response :success
   end
 
   test 'should get edit' do
-    get edit_product_url(@product)
+    get edit_category_url(@category)
     assert_response :success
   end
 
-  test 'should update product' do
-    patch product_url(@product), params: { product: { icon: @product.icon, name: @product.name } }
-    assert_redirected_to product_url(@product)
+  test 'should update category' do
+    patch category_url(@category), params: { category: { icon: @category.icon, name: @category.name } }
+    assert_redirected_to category_url(@category)
   end
 
-  test 'should destroy product' do
-    assert_difference('Product.count', -1) do
-      delete product_url(@product)
+  test 'should destroy category' do
+    assert_difference('Category.count', -1) do
+      delete category_url(@category)
     end
 
     assert_redirected_to categories_url

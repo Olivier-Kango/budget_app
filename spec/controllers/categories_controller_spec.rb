@@ -2,12 +2,12 @@
 
 require 'rails_helper'
 
-RSpec.describe Product, type: :request do
+RSpec.describe Category, type: :request do
   include Devise::Test::IntegrationHelpers
   before :each do
     @user = User.create(name: 'Anthony', email: 'anthony@gmail.com', password: '123456',
                         password_confirmation: '123456')
-    @product = Product.create(name: 'Grocery', icon: 'shopping-bag.png', author_id: @user.id)
+    @category = Category.create(name: 'Grocery', icon: 'shopping-bag.png', author_id: @user.id)
   end
 
   describe 'GET /index' do

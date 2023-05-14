@@ -2,12 +2,12 @@
 
 class ExpensesController < ApplicationController
   def index
-    @product = Product.includes(:expenses).find(params[:product_id])
-    @expenses = @product.product_recent_expenses
+    @category = Category.includes(:expenses).find(params[:category_id])
+    @expenses = @category.category_recent_expenses
   end
 
   def new
-    @categories = Product.where(author: current_user)
+    @categories = Category.where(author: current_user)
     @expense = Expense.new
     respond_to do |format|
       format.html { render :new, locals: { expense: @expense } }
@@ -33,6 +33,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:name, :amount, :product_id).merge(author: current_user)
+    params.require(:expense).permit(:name, :amount, :category_id).merge(author: current_user)
   end
 end

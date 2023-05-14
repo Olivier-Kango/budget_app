@@ -4,31 +4,31 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @categories = Product.where(author: current_user)
+    @categories = Category.where(author: current_user)
   end
 
   def show
-    @product = Product.find(params[:product_id])
+    @category = Category.find(params[:category_id])
   end
 
   def new
-    @product = Product.new
+    @category = Category.new
     respond_to do |format|
-      format.html { render :new, locals: { product: @product } }
+      format.html { render :new, locals: { category: @category } }
     end
   end
 
   def create
-    @product = Product.new(product_params)
+    @category = Category.new(category_params)
 
     respond_to do |format|
       format.html do
-        if @product.save
-          flash[:sucess] = 'Product Saved Successfully'
+        if @category.save
+          flash[:sucess] = 'Category Saved Successfully'
           redirect_to categories_path
         else
-          flash.now[:error] = 'Error: The New Product could not be saved'
-          render :new, locals: { product: @product }
+          flash.now[:error] = 'Error: The New Category could not be saved'
+          render :new, locals: { category: @category }
         end
       end
     end
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
 
   private
 
-  def product_params
-    params.require(:product).permit(:name, :icon).merge(author: current_user)
+  def category_params
+    params.require(:category).permit(:name, :icon).merge(author: current_user)
   end
 end

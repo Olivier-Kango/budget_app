@@ -29,7 +29,7 @@
 
 # 📖 Budget app <a id="about-project"></a>
 
-> The Budget app is about building a mobile web application where you can manage your budget: you have a list of expenses associated with a product, so that you can see how much money you spent and on what.
+> The Budget app is about building a mobile web application where you can manage your budget: you have a list of expenses associated with a categorie, so that you can see how much money you spent and on what.
 
 <div align="center">
 Please click on the video below to more explanation
@@ -73,7 +73,7 @@ Please click on the video below to more explanation
 ### Key Features <a id="key-features"></a>
 
 - **User can Sign_up and Sing_in**
-- **User can Add new Product**
+- **User can Add new Category**
 - **User can Create new transition**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
