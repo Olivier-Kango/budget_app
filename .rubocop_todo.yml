@@ -24,7 +24,7 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'app/controllers/expenses_controller.rb'
-    - 'app/controllers/products_controller.rb'
+    - 'app/controllers/categories_controller.rb'
     - 'app/controllers/splash_controller.rb'
     - 'app/controllers/users/registrations_controller.rb'
     - 'db/migrate/20230513132423_rename_category_id_to_product_id_in_expenses.rb'

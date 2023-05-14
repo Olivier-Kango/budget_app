@@ -1,7 +1,7 @@
 <section>
   <h4 class="bg-primary text-center text-white pb-2">Add new product</h4>
   <div class="container-fluid mt-3">
-    <%= bootstrap_form_with model: product, url: products_path(@product) do |f| %>
+    <%= bootstrap_form_with model: product, url: categories_path(@product) do |f| %>
       <div class="field">
         <%= f.text_field :name, autofocus: true, class:"rounded-0", hide_label: true, placeholder: "Product Name", required: true %>
       </div>

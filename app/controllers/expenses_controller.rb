@@ -7,7 +7,7 @@ class ExpensesController < ApplicationController
   end
 
   def new
-    @products = Product.where(author: current_user)
+    @categories = Product.where(author: current_user)
     @expense = Expense.new
     respond_to do |format|
       format.html { render :new, locals: { expense: @expense } }
@@ -21,7 +21,7 @@ class ExpensesController < ApplicationController
       format.html do
         if @expense.save
           flash[:sucess] = 'Expense Saved Successfully'
-          redirect_to products_path
+          redirect_to categories_path
         else
           flash.now[:error] = 'Error: The New Expense could not be saved'
           render :new, locals: { expense: @expense }

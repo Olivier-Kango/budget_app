@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-class ProductsController < ApplicationController
+class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @products = Product.where(author: current_user)
+    @categories = Product.where(author: current_user)
   end
 
   def show
@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
       format.html do
         if @product.save
           flash[:sucess] = 'Product Saved Successfully'
-          redirect_to products_path
+          redirect_to categories_path
         else
           flash.now[:error] = 'Error: The New Product could not be saved'
           render :new, locals: { product: @product }

@@ -14,7 +14,7 @@ RSpec.describe Expense, type: :request do
 
   describe 'GET /index' do
     before :each do
-      get products_path
+      get categories_path
     end
 
     it 'returns a successful status' do

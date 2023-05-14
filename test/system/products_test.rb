@@ -2,18 +2,18 @@
 
 require 'application_system_test_case'
 
-class ProductsTest < ApplicationSystemTestCase
+class CategoriesTest < ApplicationSystemTestCase
   setup do
-    @product = products(:one)
+    @product = categories(:one)
   end
 
   test 'visiting the index' do
-    visit products_url
-    assert_selector 'h1', text: 'Products'
+    visit categories_url
+    assert_selector 'h1', text: 'Categories'
   end
 
   test 'should create product' do
-    visit products_url
+    visit categories_url
     click_on 'New product'
 
     fill_in 'Icon', with: @product.icon
