@@ -304,6 +304,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.2)
   rails-controller-testing
   rspec-rails
+  sassc-rails
   selenium-webdriver
   shoulda-matchers (~> 5.0)
   sprockets-rails

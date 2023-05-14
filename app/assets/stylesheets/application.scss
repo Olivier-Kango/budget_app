@@ -56,3 +56,14 @@
 .field input:focus {
   outline: none !important;
 }
+
+.card-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card-date {
+  top: 1em;
+}

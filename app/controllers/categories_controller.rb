@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:category_id])
+    @category = Category.find(params[:id])
   end
 
   def new
@@ -32,6 +32,28 @@ class CategoriesController < ApplicationController
         end
       end
     end
+  end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      flash[:success] = 'Category updated successfully.'
+      redirect_to categories_path
+    else
+      flash.now[:error] = 'Error: The category could not be updated.'
+      render :edit
+    end
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    flash[:success] = 'Category deleted successfully.'
+    redirect_to categories_path
   end
 
   private

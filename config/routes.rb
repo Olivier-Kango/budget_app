@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root to: 'splash#index', as: :unauthenticated_user
 
-  resources :categories, only: %i[index show new create] do
+  resources :categories, only: %i[index show new create edit update destroy] do
     resources :expenses, only: [:index]
   end
   resources :expenses, only: %i[new create]
