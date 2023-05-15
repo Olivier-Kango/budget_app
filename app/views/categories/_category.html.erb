@@ -3,14 +3,14 @@
     <div class="card-image">
       <img src=<%= category.icon %> class="card-img-top" alt=<%= category.name %>>
     </div>
-    <div class="card-icons">
+    <%# <div class="card-icons">
       <%= link_to edit_category_path(category), class: "text-primary mr-2" do %>
-        <i class="fa fa-edit"></i>
+        <%# <i class="fa fa-edit"></i>
       <% end %>
-      <%= button_to category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger", remote: true do %>
-        <i class="fa fa-trash"></i>
-      <% end %>
-    </div>
+      <%# <%= button_to category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger", remote: true do %>
+        <%# <i class="fa fa-trash"></i>
+      <% end %>   
+    <%# </div> %>
     <div class="card-body">
       <h5 class="card-title"><%= category.name %></h5>
       <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
