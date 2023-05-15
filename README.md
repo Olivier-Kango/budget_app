@@ -84,7 +84,7 @@ Please click on the video below to more explanation
 
 > Please click the link below to open our webpage in your browser
 
-- [Live Demo Link](https://easy-business-management.onrender.com/)
+- [Live Demo Link](https://budget-app-04jo.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
