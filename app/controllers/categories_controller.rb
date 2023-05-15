@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    redirect_to categories_path
   end
 
   def new
@@ -16,6 +16,10 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       format.html { render :new, locals: { category: @category } }
     end
+  end
+
+  def edit
+    @category = Category.find(params[:id])
   end
 
   def create
@@ -34,10 +38,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def edit
-    @category = Category.find(params[:id])
-  end
-
   def update
     @category = Category.find(params[:id])
     if @category.update(category_params)
@@ -50,10 +50,18 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
-    @category.destroy
-    flash[:success] = 'Category deleted successfully.'
-    redirect_to categories_path
+    category = Category.find(params[:id])
+    # @category.destroy
+    # flash[:success] = 'Category deleted successfully.'
+    # redirect_to categories_path
+
+    respond_to do |format|
+      if category.destroy
+        format.html { redirect_to categories_path, notice: 'Category was deleted successfully.' }
+      else
+        format.html { render :new, alert: 'An error has occurred while deleting category, try again' }
+      end
+    end
   end
 
   private
