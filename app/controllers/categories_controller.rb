@@ -24,6 +24,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    category.icon.attach(params[:category][:icon])
 
     respond_to do |format|
       format.html do
@@ -51,9 +52,6 @@ class CategoriesController < ApplicationController
 
   def destroy
     category = Category.find(params[:id])
-    # @category.destroy
-    # flash[:success] = 'Category deleted successfully.'
-    # redirect_to categories_path
 
     respond_to do |format|
       if category.destroy
