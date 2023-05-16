@@ -1,7 +1,7 @@
 <%= link_to category_expenses_path(category), class:"text-dark", style:"text-decoration: none;" do %>
   <div class="card flex-row align-items-center p-3 my-3 rounded-0">
     <div class="card-image">
-      <%= image_tag category.icon, class: "card-img-top", alt: category.name %>
+      <%= image_tag category.icon_url, class: "card-img-top", alt: category.name %>
     </div>
     <%# <div class="card-icons">
       <%= link_to edit_category_path(category), class: "text-primary mr-2" do %>

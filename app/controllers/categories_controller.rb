@@ -23,24 +23,14 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
-    # category.icon.attach(params[:category][:icon])
-
-    if params[:category][:icon].present?
-      icon_file = params[:category][:icon]
-      @category.icon = icon_file
-    end
-
-    respond_to do |format|
-      format.html do
-        if @category.save
-          flash[:sucess] = 'Category Saved Successfully'
-          redirect_to categories_path
-        else
-          flash.now[:error] = 'Error: The New Category could not be saved'
-          render :new, locals: { category: @category }
-        end
-      end
+    @category = Category.create(category_params)
+  
+    if @category.save
+      flash[:success] = 'Category saved successfully.'
+      redirect_to categories_path
+    else
+      flash.now[:error] = 'Error: The new category could not be saved.'
+      render :new
     end
   end
 
