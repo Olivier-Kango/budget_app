@@ -24,7 +24,12 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    category.icon.attach(params[:category][:icon])
+    # category.icon.attach(params[:category][:icon])
+
+    if params[:category][:icon].present?
+      icon_file = params[:category][:icon]
+      @category.icon = icon_file
+    end
 
     respond_to do |format|
       format.html do
