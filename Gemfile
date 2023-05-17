@@ -98,5 +98,5 @@ gem 'rails-controller-testing'
 
 gem 'bundler', '2.4.10'
 
-gem 'shrine', '~> 3.3'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
+gem 'shrine', '~> 3.3'
