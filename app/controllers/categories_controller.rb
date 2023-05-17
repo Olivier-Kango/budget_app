@@ -23,18 +23,14 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
+    @category = Category.create(category_params)
 
-    respond_to do |format|
-      format.html do
-        if @category.save
-          flash[:sucess] = 'Category Saved Successfully'
-          redirect_to categories_path
-        else
-          flash.now[:error] = 'Error: The New Category could not be saved'
-          render :new, locals: { category: @category }
-        end
-      end
+    if @category.save
+      flash[:success] = 'Category saved successfully.'
+      redirect_to categories_path
+    else
+      flash.now[:error] = 'Error: The new category could not be saved.'
+      render :new
     end
   end
 
@@ -51,9 +47,6 @@ class CategoriesController < ApplicationController
 
   def destroy
     category = Category.find(params[:id])
-    # @category.destroy
-    # flash[:success] = 'Category deleted successfully.'
-    # redirect_to categories_path
 
     respond_to do |format|
       if category.destroy

@@ -74,7 +74,8 @@ Please click on the video below to more explanation
 
 - **User can Sign_up and Sing_in**
 - **User can Add new Category**
-- **User can Create new transition**
+- **User can Create new Expense**
+- **User can upload an image for each Category or Expense**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,6 +171,7 @@ You can deploy this project using:
 ## 🔭 Future Features <a id="future-features"></a>
 
 > Features to add to the project.
+- **Delete and edit each Category or Expense**
 - **Implement some UX improvements: include transitions and/or animations, etc.**
 - **Make a Desktop design for the webapp**
 - **Implement the left side menu to improve the navigability of the app**

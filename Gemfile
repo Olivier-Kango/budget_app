@@ -97,3 +97,6 @@ gem 'font-awesome-rails'
 gem 'rails-controller-testing'
 
 gem 'bundler', '2.4.10'
+
+gem 'image_processing', '~> 1.12', '>= 1.12.1'
+gem 'shrine', '~> 3.3'
