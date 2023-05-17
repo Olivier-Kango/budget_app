@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   resources :expenses, only: %i[new create]
 
   # Add the route for handling the GET request for the uploaded image
-  get '/uploads/:filename', to: 'uploads#show', as: :uploaded_file
+  get '/uploads/:filename', to: 'uploads#show', as: :uploads
 end
