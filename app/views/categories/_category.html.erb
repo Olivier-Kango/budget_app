@@ -18,7 +18,7 @@
       <%= link_to edit_category_path(category), class: "text-secondary mr-2" do %>
     <i class="fa fa-pencil"></i>
       <% end %>
-    <%= button_to category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-secondary", remote: true do %>
+    <%= button_to category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-secondary btn btn-link", remote: true do %>
     <i class="fa fa-trash"></i>
       <% end %>   
     </div> 
