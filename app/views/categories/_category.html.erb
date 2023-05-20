@@ -1,24 +1,26 @@
 <%= link_to category_expenses_path(category), class:"text-dark", style:"text-decoration: none;" do %>
-  <div class="card flex-row align-items-center p-3 my-3 rounded-0">
-    <div class="card-image">
-      <% if category.icon.present? %>
-        <%= image_tag category.icon_url, class: "card-img-top", alt: category.name %>
-      <% else %>
-        <%= image_tag "default_icon.png", class: "card-img-top", alt: "Default Icon" %>
-      <% end %>
+  <div class="card container flex-row justify-content-between align-items-center p-3 my-3 rounded-0">
+    <div class="container d-flex align-items-center">
+      <div class="card-image">
+        <% if category.icon.present? %>
+          <%= image_tag category.icon_url, class: "card-img-top", alt: category.name %>
+        <% else %>
+          <%= image_tag "default_icon.png", class: "card-img-top", alt: "Default Icon" %>
+        <% end %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= category.name %></h5>
+        <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
+        <p class="position-relative card-date"><%= category.updated_at.strftime('%a %b %Y') %></p>
+      </div>
     </div>
-    <%# <div class="card-icons">
-      <%= link_to edit_category_path(category), class: "text-primary mr-2" do %>
-        <%# <i class="fa fa-edit"></i>
-      <% end %>
-      <%# <%= button_to category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger", remote: true do %>
-        <%# <i class="fa fa-trash"></i>
-      <% end %>   
-    <%# </div> %>
-    <div class="card-body">
-      <h5 class="card-title"><%= category.name %></h5>
-      <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
-      <p class="position-relative card-date"><%= category.updated_at.strftime('%A-%b-%Y | %H:%M:%S') %></p>
-    </div>
+    <div class="card-icons d-flex align-items-center">
+      <%= link_to edit_category_path(category), class: "text-secondary mr-2" do %>
+      <i class="fa fa-pencil"></i>
+        <% end %>
+      <%= button_to category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-secondary btn btn-link", remote: true do %>
+      <i class="fa fa-trash"></i>
+        <% end %>   
+    </div> 
   </div>
 <% end %>
