@@ -11,6 +11,7 @@ class ExpensesController < ApplicationController
   def new
     @categories = Category.where(author: current_user)
     @expense = Expense.new
+
     respond_to do |format|
       format.html { render :new, locals: { expense: @expense } }
     end
@@ -18,12 +19,13 @@ class ExpensesController < ApplicationController
 
   def create
     @expense = Expense.new(expense_params)
+    category_id = @expense.category_id
 
     respond_to do |format|
       format.html do
         if @expense.save
           flash[:sucess] = 'Expense Saved Successfully'
-          redirect_to categories_path
+          redirect_to category_expenses_path(category_id: category_id)
         else
           flash.now[:error] = 'Error: The New Expense could not be saved'
           render :new, locals: { expense: @expense }
@@ -38,9 +40,12 @@ class ExpensesController < ApplicationController
 
   
   def update
+    @expense = Expense.find(params[:id])
+    category_id = @expense.category_id
+    
     if @expense.update(expense_params)
       flash[:success] = 'Expense updated successfully.'
-      redirect_to categories_path
+      redirect_to category_expenses_path(category_id: category_id)
     else
       flash.now[:error] = 'Error: The expense could not be updated.'
       render :edit
@@ -48,9 +53,17 @@ class ExpensesController < ApplicationController
   end
 
   def destroy
+    # Find the expense you want to delete
+    @expense = Expense.find(params[:id])
+
+    # Get the category ID of the expense
+    category_id = @expense.category_id
+
+    # Delete the expense
     @expense.destroy
-    flash[:success] = 'Expense deleted successfully.'
-    redirect_to categories_path
+
+    # Redirect to the category_expenses route with the appropriate category_id
+    redirect_to category_expenses_path(category_id: category_id), success: 'Expense deleted successfully.'
   end
 
   private

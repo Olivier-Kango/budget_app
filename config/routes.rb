@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   root to: 'splash#index', as: :unauthenticated_user
 
   resources :categories, only: %i[index show new create edit update destroy] do
-    resources :expenses, only: [:index]
+    resources :expenses, only: %i[index new create edit update destroy]
   end
-  resources :expenses, only: %i[new show create edit update destroy]
+  resources :expenses, only: %i[index show new create edit update destroy]
 
   # Add the route for handling the GET request for the uploaded image
   get '/uploads/:filename', to: 'uploads#show', as: :uploads
