@@ -4,14 +4,16 @@
       <h5 class="card-title"><%= expense.name %></h5>
       <p class="card-text"><strong>$<%= expense.amount %></strong></p>
     </div>
-    <p class="position-relative" style="top: 1em"><%= expense.updated_at.strftime('%a %b %Y') %></p>
-    <div class="card-icons d-flex align-items-center">
-      <%= link_to edit_expense_path(expense), class: "text-secondary mr-2" do %>
-        <i class="fa fa-pencil"></i>
-      <% end %>
-      <%= button_to expense_path(expense), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-secondary btn btn-link", remote: true do %>
-        <i class="fa fa-trash"></i>
-      <% end %>
+    <div class="d-flex flex-rows align-items-center justify-content-between">
+      <p class="position-relative" style="top: 1em"><%= expense.updated_at.strftime('%a %b %Y') %></p>
+      <div class="card-icons d-flex align-items-center" style="max-width: 50px;">
+        <%= link_to edit_expense_path(expense), class: "text-secondary mr-2" do %>
+          <i class="fa fa-pencil"></i>
+        <% end %>
+        <%= button_to expense_path(expense), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-secondary btn btn-link", remote: true do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
