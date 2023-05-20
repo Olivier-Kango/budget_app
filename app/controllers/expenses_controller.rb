@@ -18,7 +18,7 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @expense = Expense.create(expense_params)
     category_id = @expense.category_id
 
     respond_to do |format|
