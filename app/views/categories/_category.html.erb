@@ -1,5 +1,5 @@
 <%= link_to category_expenses_path(category), class:"text-dark", style:"text-decoration: none;" do %>
-  <div class="card container flex-row align-items-center p-3 my-3 rounded-0">
+  <div class="card container flex-row justify-content-between align-items-center p-3 my-3 rounded-0">
     <div class="container d-flex align-items-center">
       <div class="card-image">
         <% if category.icon.present? %>
@@ -14,7 +14,7 @@
         <p class="position-relative card-date"><%= category.updated_at.strftime('%a %b %Y') %></p>
       </div>
     </div>
-    <div class="card-icons">
+    <div class="card-icons d-flex align-items-center">
       <%= link_to edit_category_path(category), class: "text-secondary mr-2" do %>
     <i class="fa fa-pencil"></i>
       <% end %>
