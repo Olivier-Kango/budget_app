@@ -8,13 +8,13 @@
           <%= image_tag "default_icon.png", class: "card-img-top", alt: "Default Icon" %>
         <% end %>
       </div>
-      <div class="card-body bg-danger">
+      <div class="card-body">
         <h5 class="card-title"><%= category.name %></h5>
         <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
         <p class="position-relative card-date"><%= category.updated_at.strftime('%a %b %Y') %></p>
       </div>
     </div>
-    <div class="card-icons bg-primary">
+    <div class="card-icons">
       <%= link_to edit_category_path(category), class: "text-secondary mr-2" do %>
     <i class="fa fa-pencil"></i>
       <% end %>
