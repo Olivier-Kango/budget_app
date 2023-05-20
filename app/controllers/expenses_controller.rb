@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: [:edit, :update, :destroy]
+  before_action :set_expense, only: %i[edit update destroy]
 
   def index
     @category = Category.includes(:expenses).find(params[:category_id])
@@ -25,7 +25,7 @@ class ExpensesController < ApplicationController
       format.html do
         if @expense.save
           flash[:sucess] = 'Expense Saved Successfully'
-          redirect_to category_expenses_path(category_id: category_id)
+          redirect_to category_expenses_path(category_id:)
         else
           flash.now[:error] = 'Error: The New Expense could not be saved'
           render :new, locals: { expense: @expense }
@@ -38,14 +38,13 @@ class ExpensesController < ApplicationController
     @categories = Category.where(author: current_user)
   end
 
-  
   def update
     @expense = Expense.find(params[:id])
     category_id = @expense.category_id
-    
+
     if @expense.update(expense_params)
       flash[:success] = 'Expense updated successfully.'
-      redirect_to category_expenses_path(category_id: category_id)
+      redirect_to category_expenses_path(category_id:)
     else
       flash.now[:error] = 'Error: The expense could not be updated.'
       render :edit
@@ -63,7 +62,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     # Redirect to the category_expenses route with the appropriate category_id
-    redirect_to category_expenses_path(category_id: category_id), success: 'Expense deleted successfully.'
+    redirect_to category_expenses_path(category_id:), success: 'Expense deleted successfully.'
   end
 
   private
