@@ -1,16 +1,18 @@
 <%= link_to category_expenses_path(category), class:"text-dark", style:"text-decoration: none;" do %>
-  <div class="card flex-row align-items-center justify-content-between p-3 my-3 rounded-0">
-    <div class="card-image">
-      <% if category.icon.present? %>
-        <%= image_tag category.icon_url, class: "card-img-top", alt: category.name %>
-      <% else %>
-        <%= image_tag "default_icon.png", class: "card-img-top", alt: "Default Icon" %>
-      <% end %>
-    </div>
-    <div class="card-body bg-danger">
-      <h5 class="card-title"><%= category.name %></h5>
-      <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
-      <p class="position-relative card-date"><%= category.updated_at.strftime('%a %b %Y') %></p>
+  <div class="card container flex-row align-items-center p-3 my-3 rounded-0">
+    <div class="container d-flex align-items-center">
+      <div class="card-image">
+        <% if category.icon.present? %>
+          <%= image_tag category.icon_url, class: "card-img-top", alt: category.name %>
+        <% else %>
+          <%= image_tag "default_icon.png", class: "card-img-top", alt: "Default Icon" %>
+        <% end %>
+      </div>
+      <div class="card-body bg-danger">
+        <h5 class="card-title"><%= category.name %></h5>
+        <p class="card-text"><strong>$<%= category.category_total_amount %></strong></p>
+        <p class="position-relative card-date"><%= category.updated_at.strftime('%a %b %Y') %></p>
+      </div>
     </div>
     <div class="card-icons bg-primary">
       <%= link_to edit_category_path(category), class: "text-secondary mr-2" do %>
