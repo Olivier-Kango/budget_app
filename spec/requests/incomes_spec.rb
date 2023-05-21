@@ -78,7 +78,6 @@ RSpec.describe '/incomes', type: :request do
         end.to change(Income, :count).by(0)
       end
 
-
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
         post incomes_url, params: { income: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
