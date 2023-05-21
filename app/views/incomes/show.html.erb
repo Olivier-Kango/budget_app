@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @income %>
+
+<div>
+  <%= link_to "Edit this income", edit_income_path(@income) %> |
+  <%= link_to "Back to incomes", incomes_path %>
+
+  <%= button_to "Destroy this income", @income, method: :delete %>
+</div>
