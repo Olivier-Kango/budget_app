@@ -9,3 +9,6 @@
 </div>
 
 <%= link_to "New income", new_income_path %>
+
+<% total_income = @incomes.sum(:income) %>
+<p>Total Income: <%= total_income %></p>
