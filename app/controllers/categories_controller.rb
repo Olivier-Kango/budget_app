@@ -6,12 +6,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.where(author: current_user)
     @incomes = Income.where(category_id: @categories.pluck(:id))
-    
-    # Fetch total income from the Income controller
-    income_controller = IncomesController.new
-    income_controller.instance_variable_set(:@incomes, @incomes) # Set the same @incomes data
-    @total_income = income_controller.send(:calculate_total_income) # Call the method to calculate total income
-  
+    @total_income = @incomes.sum(:income)
   end
 
   def show
