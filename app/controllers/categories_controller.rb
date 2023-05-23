@@ -5,8 +5,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.where(author: current_user)
-    @incomes = Income.where(category_id: @categories.pluck(:id))
-    @total_income = @incomes.sum(:income)
+    @total_income = Income.where(category_id: @categories.pluck(:id)).sum(:income) || 0
   end
 
   def show
