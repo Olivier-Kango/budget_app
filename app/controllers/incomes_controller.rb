@@ -68,4 +68,8 @@ class IncomesController < ApplicationController
   def income_params
     params.require(:income).permit(:income)
   end
+
+  def calculate_total_income
+    @incomes.sum(:income)
+  end
 end
